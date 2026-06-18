@@ -15,11 +15,11 @@ sealed class ChatItem {
         val message: String,
         val messageTime: LocalDateTime,
         val userAvatarUrl: String,
-        val isUnread: Boolean,
-        val unreadCount: Int,
+        var isUnread: Boolean,
+        var unreadCount: Int,
         val isSend: Boolean,
         val isDelivered: Boolean,
-        val isArchived: Boolean,
+        var isArchived: Boolean,
         val isScam: Boolean
     ) : ChatItem()
 
@@ -32,11 +32,11 @@ sealed class ChatItem {
         val message: String,
         val messageTime: LocalDateTime,
         val userAvatarUrl: String,
-        val isUnread: Boolean,
-        val unreadCount: Int,
+        var isUnread: Boolean,
+        var unreadCount: Int,
         val isSend: Boolean,
         val isDelivered: Boolean,
-        val isArchived: Boolean,
+        var isArchived: Boolean,
         val isScam: Boolean
     ) : ChatItem()
 }
