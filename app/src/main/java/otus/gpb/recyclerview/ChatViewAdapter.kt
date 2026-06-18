@@ -48,10 +48,10 @@ class ChatViewAdapter @OptIn(InternalSerializationApi::class) constructor(
     ) {
         when (holder) {
             is UserItemViewHolder -> {
-                holder.elementView.findViewById<TextView>(R.id.user_name).text = (data[position] as ChatItem.UserItem).userName
+                holder.bind(item = data[position] as ChatItem.UserItem)
             }
             is GroupItemViewHolder -> {
-                holder.elementView.findViewById<TextView>(R.id.group_name).text = (data[position] as ChatItem.GroupItem).chatName
+                holder.bind(item = data[position] as ChatItem.GroupItem)
             }
         }
     }
